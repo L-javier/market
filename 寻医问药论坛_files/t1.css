@@ -1,0 +1,174 @@
+html,body{
+	margin: 0px;
+	padding: 0px;
+	background-color: #f1f1f1;
+	font-size: 14px;
+	height: 100%;
+	width: 100%;
+}
+
+span.bold{
+	font-weight: bold;
+}
+
+span.red{
+	color: red;
+}
+
+#centerPane{
+	margin: 0px auto;
+	padding-left: 12px;
+	padding-right: 12px;
+    max-width: 750px;
+    min-width: 320px;
+    margin-bottom: 150px;
+}
+
+#contentPane img{
+	margin: 0px;
+	padding: 0px;
+	border: 0px;	
+	width: 100%;
+	vertical-align: middle;
+}
+
+#contentPane>p{
+	max-width: 100%!important;
+    word-wrap: break-word!important;
+	line-height: 1.6;
+	font-size: 1.2em;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: inherit;
+    text-align: justify;
+}
+
+.weixin{
+	color: rgb(255, 0, 0);
+    line-height: 22px;
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+.weixinNum{
+	color: rgb(62, 62, 62);
+    line-height: 24px;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: rgb(255, 255, 0);
+}
+
+#orderForm{
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 16px;
+	padding: 12px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #cccccc;
+    background-color: #FFFFFF;    
+}
+
+#orderForm span{
+	display: inline-block;
+	margin-bottom: 0px;
+	margin-right: 6px;
+}
+
+#orderForm input[type='text'], textarea{
+	display: inline-block;
+	width: 60%;
+	border-width: 1px;
+	border-color: #cccccc;
+	padding-left: 4px;
+}
+
+#orderForm input[type='text']{	
+	height: 22px;	
+	margin-bottom: 12px;
+}
+	
+#orderForm input[type='radio']{
+	width: auto;
+}
+
+#orderForm textarea{	
+	height: 52px;	
+}
+
+#submitButton{
+	margin-top: 16px;
+	height: 36px;
+    width: 100%;
+    text-align: center;
+    background: #ee1313;
+    color: #fff;
+    border: 0px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#footer{
+	position: fixed;
+	z-index: 100;
+    bottom: 0;
+    width: 100%;
+}
+
+#footer img.bg{
+	max-height : 140px;
+	min-height : 90px;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	vertical-align: middle;
+}
+
+#footer img.icon{
+	position : absolute;
+	left:8px; 
+	top:8px;
+	width: 100px;
+	height: 100px;
+}
+
+#footer .text{
+	position : absolute;
+	left:120px; 
+	top:8px;
+}
+
+#shortcut{
+	position: fixed;
+	z-index: 300;
+	min-width: 32px;
+	min-height: 32px;
+	max-width: 64px;
+	max-height: 64px;
+	top: 6px;
+	right: 6px;
+}
+
+#popup{
+	position: fixed;
+	z-index: 200;
+	min-width: 60%;
+	min-height: 40%;
+}
+
+#popupClose{
+	position : absolute;
+	display: inline-block;
+	top: 0px;
+	right: 0px;
+	padding: 12px;
+}
+
+#popupMask{
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+}

@@ -1,303 +1,1528 @@
 <!DOCTYPE html>
-<!-- saved from url=(0028)http://yjyd.hongtustone.com/ -->
-<html class="wq-id"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="format-detection" content="telephone=no">
+<!-- saved from url=(0023)http://jiulevip.com/p4# -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>寻医问药论坛</title>
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
+		
+		<link rel="Shortcut Icon" href="http://jiulevip.com/img/favicon.ico">
+	    <link rel="stylesheet" type="text/css" href="./寻医问药论坛_files/t1.css">
+	    <script src="./寻医问药论坛_files/prototype.js.下载"></script>
+	    <script src="./寻医问药论坛_files/clipboard.min.js.下载"></script>
+	    <script src="./寻医问药论坛_files/product.js.下载"></script>
+	<style>
+* {
+    margin: 0;
+    padding: 0;
+}
+.list_item_time{display:inline-block;color:#c5c9cd;margin:0 8px;}
+html {
+    font-family: -apple-system-font, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    font-size: 14px;
+}
 
-<meta http-equiv="Expires" content="-1">
-<meta http-equiv="Cache-Control" content="no-cache">
-<meta http-equiv="Pragma" content="no-cache">
-<title></title>
-<link rel="stylesheet" type="text/css" href="./index.css" media="all">
-<style type="text/css">
-.STYLE1 {	color: #FF0000
+.cl {
+    clear: both;
 }
-.STYLE9 {color: #000000}
-.rich_media_meta {	display:inline-block;
-	vertical-align:middle;
-	font-weight:400;
-	font-style:normal;
-	margin-right:.5em;
-	font-size:12px;
-	width:auto;
-	overflow:hidden;
-	text-overflow:ellipsis;
-	white-space:nowrap;
-	word-wrap:normal;
-	max-width:none
+
+.red {
+    color: #FF0000;
+    font-weight: 700;
 }
-.rich_media_meta_list {	text-align:left;
-	height:20px;
-	line-height:20px;
+
+.header {
+  background: #e4f3d6 none repeat scroll 0 0;
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 8px;
 }
-.STYLE11 {font-size: 12px}
-.STYLE13 {font-size: 23px}
-.STYLE15 {
-	color: #FF0000;
-	font-weight: bold;
-	font-size: 16px;
+
+.nav {
+    font-size: 12px;
+    color: #999;
+    padding: 8px 6px;
 }
-.STYLE17 {
-	font-family: "新宋体";
-	font-size: 13px;
+
+.question {
+    border-top: 1px solid #E3E3E7;
+    border-bottom: 1px solid #E3E3E7;
 }
-.STYLE19 {color: #000000; font-weight: bold; }
-.STYLE20 {font-size: 13px; color: #000000;}
-.STYLE21 {color: #000066}
-.STYLE23 {
-	color: #FF0000;
-	font-size: 15px;
-	font-weight: bold;
+
+.question .question-status {
+    float: left;
+    width: 4%;
+    background: #e4f3d6;
+    color: #000;
+    font-size: 14px;
+    padding: 10px;
 }
-.STYLE25 {color: #FF0000; font-size: 15px; }
-.STYLE32 {color: #0000FF}
-.STYLE33 {
-	color: #313031;
-	font-weight: bold;
+
+.question .question-info {
+    float: left;
+    margin-left: 10px;
+    width: 80%;
 }
-.STYLE35 {color: #FF0000; font-weight: bold; }
+
+.question .question-info .question-title {
+    color: #FF0000;
+    margin-top: 10px;
+}
+
+.question .question-info .question-author {
+    color: #999;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.question-desc {
+    padding: 10px 8px;
+    border-bottom: 10px solid #E3E3E7;
+    line-height: 180%;
+}
+
+.answer .doc-answer-title {
+    padding: 10px 8px;
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 1px solid #e4f3d6;
+}
+
+.doc-answer .doc-icon {
+    float: left;
+    width: 60px;
+}
+
+.doc-answer .doc-info {
+    margin-top: 10px;
+}
+
+.doc-answer .doc-info .doc-icon img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+.doc-answer .doc-info .doc-desc {
+    float: left;
+    line-height: 20px;
+}
+
+.doc-answer .doc-info .doc-desc .doc-title {
+    font-size: 12px;
+    color: #888;
+}
+
+.doc-answer-content {
+    padding: 10px;
+    line-height: 180%;
+}
+
+.doc-like,
+.author-comment .author-comment-like {
+    color: #333;
+    padding: 10px;
+    border-top: 1px solid #E3E3E7;
+    border-bottom: 1px solid #E3E3E7;
+}
+
+.doc-answer-content img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.author-comment .author-info {
+    font-size: 16px;
+    color: #02879f;
+    padding: 10px;
+    border-top: 1px dashed #000;
+    padding-bottom: 0px;
+}
+
+.author-comment .author-comment-content {
+    padding: 10px;
+    line-height: 180%;
+}
+
+.comment .title {
+    padding: 10px 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.comment ul {
+    list-style: none;
+}
+
+.comment .lz-msg .icon {
+    float: left;
+    width: 60px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.comment .lz-msg .icon img {
+    display: block;
+    margin: 0 auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.comment .lz-msg .lz-info {
+    line-height: 20px;
+}
+
+.comment ul li {
+    margin-top: 10px;
+}
+
+.comment .lz-msg .lz-info .lz-name {
+    color: #02879f;
+}
+
+.comment .lz-msg .lz-info .lz-level {
+    color: #888;
+    font-size: 12px;
+}
+
+.comment .lz-content {
+    padding: 10px;
+    border-bottom: 1px solid rgb(188, 192, 197);
+    line-height: 180%;
+}
+
+.comment .lz-content img {
+    display: block;
+    width: 100%;
+}
+
+.buchong {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed #000;
+}
+
+.buchong .buchong-title {
+    font-weight: 600;
+}
+
+.buchong .buchong-content {
+    text-indent: 2em;
+}
+
+.recomment {
+    background: #f1f1f1;
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
+.recomment .recomment-name {
+    color: #02879F;
+    margin-top: 8px;
+    line-height: 150%;
+}
+
+.footer {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #E3E3E7;
+}
+
+.touch-platform {
+    background: #07B3E3;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.touch-platform a {
+    display: block;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 6px;
+    width: 70px;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+#contentPane .doc-icon img, #contentPane .icon img{
+    margin: 0 auto;
+    border-radius: 20px;
+    width: 40px;
+}
+#shortcut{
+    top: 30%;
+}
 </style></head>
-<body class="wq-id">
-<div id="content" style="margin-bottom: 80px;" class="wq-id">
-  <div class="content wx-id">
-	  <p style="font-size: 16px; line-height: 25px; text-align: left;"><strong><span class="zy"><span class="STYLE9">阅读超100万解决早泄阳痿短小案例！</span>~<span class="STYLE1">首次揭秘50岁房事久战1小时不泄的的秘诀！</span></span></strong></p>
-	  <p style="font-size: 16px; line-height: 25px; text-align: left;"><span class="rich_media_meta_list"> <span class="rich_media_meta ">2016-06-15</span> <a class="bc" href="javascript:void(0);">安全壮阳方法推荐</a></span></p>
-  </div>
-  <div class="anli wx-id wq-id" style="font-size: 17px; line-height: 24px;">
-		<div style="background: rgb(192, 0, 0) none repeat scroll 0% 0%; line-height: 40px; color: rgb(255, 255, 255); margin-bottom: 10px; text-align: center; font-weight: bold; font-size: 16px;"><span class="zy"><p>治疗阳痿早泄最好的中药方。</p>为了一个承诺，为了感恩，决定分享我从“秒射男”变成“猛虎哥”的补肾壮阳经历！（花3分钟把文章看完包你终身受益）</span></div>
-		<p style="margin-top: 10px;"></p>
-	  <div class="anlipic STYLE17">（据统计,此文至少已经帮助数十万<span class="STYLE15"><span class="STYLE9">25至65岁</span>早泄、阳痿、阴茎短小、肾虚乏力、前列腺炎、勃起无力、反应迟钝、性欲下降、房事时间短等</span><span class="STYLE20">等</span>多种性功能障碍问题，为了方便下次阅读，<span class="STYLE9">强烈建议<span class="STYLE23">收藏</span>本文!</span>）</div>
-		<p style="margin: 10px 0px; line-height: 24px;">　　我姓樊，名字就不说了，大家可以叫我老樊。男人那方面不行不是什么光彩的事，请兄弟们见谅包涵。我今年43岁，2010年离的婚，前妻和我生活了10年，有一个女儿9岁。离婚原因很复杂，但是最重要一点是<span class="STYLE1">我发现前妻在外面找男人，而且不止一个</span>。我很气愤，但是也很无奈。</p>
-		<div class="anlipic"><img src="./index_files/a.jpg"></div>
-		<p style=" text-indent:2em;()">我天生<span class="STYLE1">丁丁有些短小</span>，因为年轻时手淫现在就<span class="STYLE1">射的很快</span>，刚开始几分钟，最后<span class="STYLE1">几十秒</span>就完事。而且<span class="STYLE1">勃起硬度和速度越来越差</span>，前年还查出来有<span class="STYLE1">前列腺炎</span>。每次和前妻房事都是对我<span class="STYLE1">自尊心</span>的一种伤害，我最怕完事后前妻那种<span class="STYLE33">无言的沉默和失望的眼神</span>，<span class="STYLE1">女人30如狼40如虎</span>确实没说错。前妻离婚时说和我这几年她<span class="STYLE1">就像在守“寡”</span>，这话真的很伤人，兄弟们应该能理解。</p>
-		<div style="background: rgb(192, 0, 0) none repeat scroll 0% 0%; line-height: 40px; color: rgb(255, 255, 255); margin-bottom: 10px; text-align: center; font-weight: bold; font-size: 16px;"><strong>“老弟”硬如铁，转身变猛虎！</strong></div>
-		<p style=" text-indent:2em;()">不过，天无绝人之路，一次偶然让我遇到了是一位有名的老师——高老师，其配方精，准，狠，说他是中国的肾派泰斗，还是医师世家，祖上是宫廷御医，专治男人肾虚早泄，增大增粗有绝活。用高老师调配的方子，再加上<span class="STYLE1"><strong>高老师的日常辅导</strong></span>，仅仅用了<span class="STYLE1">三天</span>我男根就有了感觉。热热涨涨的，<span class="STYLE1">性欲明显提高了</span>，一周后我竟然有了<span class="STYLE1">晨勃</span>。早上起来看到“老弟”<span class="STYLE1">昂首挺胸，咄咄逼人的样子</span>，心情那叫一个棒。</p>
-		<p style=" text-indent:2em;()">半个月后，房事时间<span class="STYLE1">提高到了15分钟左右</span>，这对于我以前秒射来说真的是天大的改善。尤其<span class="STYLE1">硬度增强了不少</span>，每次房事前不出1分钟就<span class="STYLE1">硬的涨的就像小钢炮</span>。</p>
-		 <p style="margin: 10px 0px; text-align: center; color: rgb(255, 0, 0);" class="wq-id"><strong>我的“强硬”全是因为加了</strong><span class="anli wx-id wq-id" style="font-size: 17px; line-height: 24px;"><span style="margin: 10px 0px; text-align: center; color: rgb(255, 0, 0);" class="wq-id"><span class="STYLE9"><span class="STYLE21">高老师</span>微信号</span>：<b style="color: rgb(230, 0, 19); font-size: 21px; background-color: rgb(255, 244, 92);" class="wq-id">JT01010</b>（←长按可复制）<span class="anli wx-id wq-id" style="font-size: 17px; line-height: 24px;">可加他微信</span></span> <span style="color: rgb(255, 0, 0);"> </span><b><span style="color: rgb(255, 0, 0);">  </span></b>，<span class="STYLE9">我可以你也可以，绝对少走很多弯路，动动手指的事，千万别错过！</span></span></p>
-     <p style="margin: 10px 0px; text-align: center; color: rgb(255, 0, 0);"><strong><span class="STYLE32">提醒：阳痿早泄短小不可怕！可怕的是你没找对方法！而且咨询高老师是完全免费的，想要少走弯路，快速解决阳痿早泄短小问题，就赶快加高老师的微信吧！</span></strong></p>
-		<p style=" text-indent:2em;()">3个多月后我感觉自己就像<span class="STYLE1">恢复到20岁的状态</span>，真的是<span class="STYLE1"><strong>硬如铁</strong></span>，而且<span class="STYLE1">尺寸竟然也变大了不少</span>，一次<span class="STYLE1">半个多小时</span>都不尽兴。现在的老婆说我变化好大，她都有些招架不住，夸我<span class="STYLE35">“猛虎”</span><span class="STYLE9">下山有霸气</span>，真的特有面子！非常感谢高老师！（别觉得我吹牛，你可以加高老师的微信自己看朋友圈的案例，比我强的多太多了）</p>
-		<div class="anlipic"><img src="./index_files/b.jpg"></div>
-		
-    <p style="margin: 10px 0px; text-align: center; color: rgb(255, 0, 0);" class="wq-id"><strong>我的“强硬”全是因为加了</strong><span class="anli wx-id wq-id" style="font-size: 17px; line-height: 24px;"><span style="margin: 10px 0px; text-align: center; color: rgb(255, 0, 0);" class="wq-id"><span class="STYLE9"><span class="STYLE21">高老师</span>微信号</span>：<b style="color: rgb(230, 0, 19); font-size: 21px; background-color: rgb(255, 244, 92);" class="wq-id">JT01010</b>（←长按可复制）</span>可加他微信: <b><span style="color: rgb(255, 0, 0);">  </span></b>，<span class="STYLE9">我可以你也可以，绝对少走很多弯路，动动手指的事，千万别错过！</span></span></p>
-	
-
-    <p style="margin: 10px 0px; text-align: center; color: rgb(255, 0, 0);"><strong><span class="STYLE32">提醒：阳痿早泄不可怕！可怕的是你没找对方法！而且咨询高老师是完全免费的，想要少走弯路，快速解决阳痿早泄问题，就赶快加高老师的微信吧！</span></strong></p>
-    <p style="margin: 10px 0px; text-align: center; color: rgb(255, 0, 0);">↓↓↓<span style="margin: 10px 0px; text-align: center; color: rgb(255, 0, 0);"><span class="STYLE21">下面是高老师朋友圈改善问题的兄弟案例，绝对真实！</span><span class="STYLE25">（想看更多可以加高老师授微信翻朋友圈，和兄弟们相互学习交流！）</span></span>↓↓↓</p>
-  </div>
-  <div align="center"><img src="./index_files/c.jpg">
-  </div>
-  <div align="center"><img src="./index_files/d.jpg">
-  </div>
-  <div align="center"><img src="./index_files/e.jpg">
-  </div>
-  <!-- <div align="center"><img src="./index_files/n4.jpg">
-  </div> -->
-  <p style="margin: 10px 0px; text-align: center; color: rgb(255, 0, 0);"><span style="margin: 10px 0px; text-align: center; color: rgb(255, 0, 0);"><span class="STYLE25">（篇幅有限，随便先找了这几个，想看更多可以加高老师微信自己去看！）</span></span></p>	
-  <div class="anli wx-id wq-id" style="font-size: 17px; line-height: 24px;">
-		<div style="background: rgb(192, 0, 0) none repeat scroll 0% 0%; line-height: 40px; color: rgb(255, 255, 255); margin-bottom: 10px; text-align: center; font-weight: bold; font-size: 16px;"><strong>弯路走了不少，但我依然不放弃希望！</strong></div>
-		<p style=" text-indent:2em;()">和前妻离婚后，我先去的医院。医生说要想彻底解决需要做手术，我一听还是算了。朋友做了这手术后<span class="STYLE1">肠子都悔青了</span>，钱是小事，男人那玩意做手术动刀子万一出问题那不是彻底完完了。<span class="STYLE1">手术是切断神经</span>，见效确实快，但是没快感做那事还有意义吗？</p>
-		<p style=" text-indent:2em;()">在这期间我也四处打听和购买各种各样的补肾壮阳东西，钱花了不少，但都不是很理想，大部分没效果。什么六味地黄丸、肾宝我天天吃，真没感觉到多大改善。有效果的都是一用就有效果，不用又恢复原样，甚至更严重。最主要的是<span class="STYLE35">买了之后没人指导使用，没售后服务，或者彻底联系不上了，价格还老贵，</span>哎！冤枉钱花了不少，全是弯路。不过我没有放弃，依然抱有希望，毕竟<span class="STYLE1">自己的性福比什么都重要啊！</span></p>
-		<div style="background: rgb(192, 0, 0) none repeat scroll 0% 0%; line-height: 40px; color: rgb(255, 255, 255); margin-bottom: 10px; text-align: center; font-weight: bold; font-size: 16px;">50岁老友房事1小时秘诀分享！救我于水深火热！</div>
-		<div class="anlipic"><img src="./index_files/f.jpg"></div>
-		<p style=" text-indent:2em;(也可以用像素为单位)">一次和老朋友喝酒，看到老朋友又换了个年轻漂亮的美女，我心里既羡慕又好奇。于是趁美女去洗手间的时候，打趣老朋友50多岁的人了，心还这么花，身体能吃得消吗。老朋友神秘的一笑，傲气的说他今夕不同往日，<span class="STYLE1">裆下那玩意现在绝对不输小伙子</span>，现在考虑吃不消的不是他，而是那个小美女。</p>
-		<p style=" text-indent:2em;(也可以用像素为单位)" class="wq-id">我一听来了兴趣，老朋友以前房事比我好不了多少，如果真是这样的，那真是奇迹了。我立刻虚心求教，老朋友也不藏私，打开我的手机，输入了个微信号（ <b style="color: rgb(230, 0, 19); font-size: 21px; background-color: rgb(255, 244, 92);" class="wq-id">JT01010</b>），告诉我说你用这个高老师调配的方子，按照高老师的知道方法使用，注意禁忌，效果杠杠的。而且<span class="STYLE1">高老师会随时给予健康指导</span>，有任何问题都可以咨询。并且朋友圈每天更新最新的关于男性早泄阳痿等男性方面的知识分享，学了绝对受益匪浅！</p>
-		<p style=" text-indent:2em;(也可以用像素为单位)">如果真是老朋友说的这样，那真是我的救命稻草，我满怀期待。</p>
-		<p style=" text-indent:2em;(也可以用像素为单位)">没过多长时间，高老师通过了我的好友申请。高老师详细的了解了我的病情后，确定了我早泄阳痿的原因！心里很自责以前太放纵了才造成如今这个样子。</p>
-		<p style=" text-indent:2em;(也可以用像素为单位)">高老师<span class="STYLE1"><strong>结合我的情况调配了人参，马鹿茸，淫羊藿，刺五加 ，牛磺酸（部分成分保密）等纯中药成分制成的等名贵配方</strong></span>，并嘱咐我要经常看他朋友圈的男性养性知识，以后必定会少走弯路，并祝我早日康复。</p>
-		<p style=" text-indent:2em;(也可以用像素为单位)">晚上在酒店，听着隔壁老朋友和美女<span class="STYLE1">长达1个多小时的战斗声响</span>，我既羡慕又嫉妒，同时心中又满是期待。</p>
-		<p style=" text-indent:2em;(也可以用像素为单位)">3天后我收到了高老师邮寄来的调配好的配方，满怀期待的在高老师的指导下开始服用。高老师人真的很细心，隔三差五的就电话或者微信指导我服用，我有任何问题都第一时间解答，调理期能做的和不能做的事无巨细都面面俱到，感觉高老师就像我的私人医生一样。</p>
-  </div>
-
-	<div class="anli wx-id wq-id" style="font-size: 17px; line-height: 24px;">
-		<div style="background: rgb(192, 0, 0) none repeat scroll 0% 0%; line-height: 40px; color: rgb(255, 255, 255); margin-bottom: 10px; text-align: center; font-weight: bold; font-size: 16px;">妙手回春，助我拥有帝王般至尊激情！信守承诺，祝天下所有兄弟都如“猛虎下山”</div>
-		<p style=" text-indent:2em;(也可以用像素为单位)">说实话，这几年我买的所有东西，没有一个售后像高老师<span class="STYLE1">这样服务周到</span>，高老师说他做的是<span class="STYLE1">口碑，是诚信，服务是第一位的</span>，只有这样才能保证好的效果！</p>
-		<p style=" text-indent:2em;(也可以用像素为单位)">后来在高老师的指导下，我恢复的非常理想，效果就是文章开头我说的那样。现在我和老婆在一起自信满满，每次房事都是我的主场，老婆每次都很满足，对我也越来越崇拜，根本就离不开我。如果不是高老师的悉心调理和指导，我真不敢想象以后的生活，真不知道怎么感谢高老师。</p>
-		
-		<p style="margin: 10px 0px; text-align: center; color: rgb(255, 0, 0);" class="wq-id"><span style="margin: 10px 0px; text-align: center; color: rgb(255, 0, 0);" class="wq-id"><span style="margin: 10px 0px; line-height: 24px;">为了感恩，老樊推荐：</span>→<span class="STYLE9">高老师微信号</span>：<b style="color: rgb(230, 0, 19); font-size: 21px; background-color: rgb(255, 244, 92);" class="wq-id">JT01010</b>（←长按可复制）<br>可加他微信。<span style="color: rgb(255, 0, 0);"> </span><b><span style="color: rgb(255, 0, 0);">  </span></b></span></p>
-		
-		<p style="margin: 10px 0px; text-align: center; color: rgb(255, 0, 0);"><strong><span class="STYLE32">提醒：阳痿早泄不可怕！可怕的是你没找对方法！而且咨询高老师是完全免费的，想要少走弯路，快速解决阳痿早泄问题，就赶快加高老师的微信吧</span></strong></p>
-		<p style="margin: 10px 0px; text-align: center; color: rgb(255, 0, 0);"><span class="STYLE19">高老师平时分享<span class="STYLE1">免费</span>的一些<span class="STYLE1">壮阳调理</span>方法，解答阳痿早泄原因，壮阳补肾期间饮食注意事项，早泄的危害等等问题</span><span class="STYLE9"><strong>！</strong></span>
-		</p><div style="background: rgb(192, 0, 0) none repeat scroll 0% 0%; line-height: 40px; color: rgb(255, 255, 255); margin-bottom: 10px; text-align: center; font-weight: bold; font-size: 16px;">生了个儿子，喜上加喜，真心感谢<span style=" text-indent:2em;(也可以用像素为单位)">高老师</span>！</div>
-		<p style=" text-indent:2em;(也可以用像素为单位)"> 还有个好消息是，为了响应二孩号召，在高老师的指导下，通过过我的努力耕耘，我现在的老婆也顺利的怀上了二宝，今年5月给我生了一个儿子，<span class="STYLE1">真是喜上加喜</span>。说实话，像我这样的年龄能让女友怀上二宝真的挺不容易，要不是高老师的悉心调理，怀上的可能性真不大，真不知道怎么感谢高老师。高老师说如果真要感谢他，就让我把自己的经历写出来，分享给更多的和我有一样苦恼的兄弟，这样他就能帮助更多的人解决男性性健康的烦恼，同时对他的事业和调理理念是最好的帮助和推广。</p>
-		<!-- <div class="anlipic"><img src="./index_files/eh.jpg"></div> -->
-		<p style=" text-indent:2em;(也可以用像素为单位)" class="wq-id"> 和我有一样阳痿早泄的兄弟们，真心推荐高老师微信（<b style="color: rgb(230, 0, 19); font-size: 21px; background-color: rgb(255, 244, 92);" class="wq-id">JT01010</b><span style="margin: 10px 0px; text-align: center; color: rgb(255, 0, 0);">←长按可复制</span>），他平时发的一些<span class="STYLE1">男性壮阳知识绝对是能帮助到兄弟们</span>，这些<span class="STYLE1">壮阳知识在其他地方真的学不到</span>，而且大家有<span class="STYLE1">任何关于男性生殖健康或者身体保养的知识都可以咨询高老师，</span>肯定可以让大家少走许多弯路。</p>
-		
-		
-		<p style="margin: 10px 0px; text-align: center; color: rgb(255, 0, 0);"><span class="main STYLE9" style="text-align:center; padding-top:10px; line-height:30px;">阅读100000+ <img src="./index_files/g.jpg" class="b"> 13627赞 </span></p>
-		<p style="margin: 10px 0px; text-align: center; color: rgb(255, 0, 0);"><span class="main STYLE9" style="text-align:center; padding-top:10px; line-height:30px; border-bottom:1px solid #555555;">精彩评论 </span></p>
-	</div>
-	<div class="erweima"></div>
-	
-	<article class="detaillist wq-id">
-		<div class="detail">
-			<div class="title"><a class="bc" href="javascript:void(0);">高老师　　</a><span class="fr ">2楼</span></div>
-<div class="content_box">
-<div class="content wap_content">
-					<p>我原来早泄2分钟就射现在20多分钟很满意，高老师人很好，随时问随时解答，推荐大家咨询</p>
-					<small class="fl">　</small>
-					<span class="fr"><a class="fl quotereply" href="javascript:void(0);"><i class="icon huifu"></i>回复</a></span>
-		  <div class="clear"></div>
-	    </div>
-		  </div>
-		</div>
-		<div class="detail wq-id">
-			<div class="title"><a class="bc" href="javascript:void(0);">刘先生　</a><span class="fr ">3楼</span></div>
-            <div class="content_box wq-id">
-<div class="content wap_content wq-id">
-					<p class="wq-id">我勃起无力和重度早泄有9年了，用了不知道多少东西，现在高老师给我调理都有很大的改善，强烈推荐<span style=" text-indent:2em;(也可以用像素为单位)">高老师</span>微信： <b style="color: rgb(230, 0, 19); font-size: 21px; background-color: rgb(255, 244, 92);" class="wq-id">JT01010</b></p>
-					<small class="fl"></small>
-					<span class="fr"><a class="fl quotereply" href="javascript:void(0);"><i class="icon huifu"></i>回复</a></span>
-		  <div class="clear"></div>
-	    </div>
-				
-		  </div>
-		</div>
-		<div class="detail">
-			<div class="title"><a class="bc" href="javascript:void(0);">美丽的世界</a><span class="fr ">4楼</span></div>
-<div class="content_box">
-<div class="content wap_content">
-					<p>用高老师的方子效果很好，原来几分钟现在几十分钟，我的案例就在高老师朋友圈晒着，希望能帮助到兄弟们！。</p>
-					<small class="fl"></small>
-					<span class="fr"><a class="fl quotereply" href="javascript:void(0);"><i class="icon huifu"></i>回复</a></span>
-		  <div class="clear"></div>
-	    </div>
-				
-		  </div>
-		</div>
-		
-		<div class="detail">
-			<div class="title"><a class="bc" href="javascript:void(0);">钱先生　</a><span class="fr ">5楼</span></div>
-<div class="content_box">
-<div class="content wap_content">
-					<p>我今年55岁也用了<span style=" text-indent:2em;(也可以用像素为单位)">高老师的方子调理</span>时间增加了十几分钟，硬的不行，一晚上2次也感觉不到累</p>
-					<small class="fl"></small>
-					<span class="fr"><a class="fl quotereply" href="javascript:void(0);"><i class="icon huifu"></i>回复</a></span>
-		  <div class="clear"></div>
-	    </div>
-				
-		  </div>
-		</div>
-		<div class="detail">
-			<div class="title"><a class="bc" href="javascript:void(0);">草原</a><span class="fr ">6楼</span></div>
-<div class="content_box">
-<div class="content wap_content">
-					<p>为了买房压力太大导致阳痿了。认识<span style=" text-indent:2em;(也可以用像素为单位)">高老师</span>之后现在干起来就像火山爆发，从来没有这么强势过！，</p>
-					<small class="fl"></small>
-					<span class="fr"><a class="fl quotereply" href="javascript:void(0);"><i class="icon huifu"></i>回复</a></span>
-		  <div class="clear"></div>
-	    </div>
-				
-		  </div>
-		</div>
-		<div class="detail">
-			<div class="title"><a class="bc" href="javascript:void(0);">林华　　</a><span class="fr ">7楼</span></div>
-<div class="content_box">
-<div class="content wap_content">
-					<p>加<span style=" text-indent:2em;(也可以用像素为单位)">高老师</span>不仅身体能调理好，也能知道很多有用的知识，太受用了，谢谢　</p>
-					<small class="fl">　</small>
-					<span class="fr"><a class="fl quotereply" href="javascript:void(0);"><i class="icon huifu"></i>回复</a></span>
-		  <div class="clear"></div>
-	    </div>
-				
-		  </div>
-		</div>
-		<div class="detail">
-			<div class="title"><a class="bc" href="javascript:void(0);">赵吉光　　</a><span class="fr ">8楼</span></div>
-<div class="content_box">
-<div class="content wap_content">
-					<p>感激！感恩！感谢！</p>
-					<small class="fl"> </small>
-					<span class="fr"><a class="fl quotereply" href="javascript:void(0);"><i class="icon huifu"></i>回复</a></span>
-		  <div class="clear"></div>
-	    </div>
-				
-		  </div>
-		</div>
-		<div class="detail">
-			<div class="title"><a class="bc" href="javascript:void(0);">邓女士</a><span class="fr ">9楼</span></div>
-<div class="content_box">
-<div class="content wap_content">
-					<p>服务到位，多年阳痿困扰解决，有问题的哥们建议咨询高老师</p>
-					<small class="fl"></small>
-					<span class="fr"><a class="fl quotereply" href="javascript:void(0);"><i class="icon huifu"></i>回复</a></span>
-<div class="clear"></div>
-			  </div>
-				
-		  </div>
-		</div>
-		<div class="detail">
-			<div class="title"><a class="bc" href="javascript:void(0);">马先生　　</a><span class="fr ">10楼</span></div>
-<div class="content_box">
-<div class="content wap_content">
-					<p>已买，高老师解答的很详细，感激！</p>
-					<small class="fl"></small>
-					<span class="fr"><a class="fl quotereply" href="javascript:void(0);"><i class="icon huifu"></i>回复</a></span>
-<div class="clear"><span style=" text-indent:2em;(也可以用像素为单位)"></span></div>
-			  </div>
-				
-		  </div>
-		</div>
-        
-           	  
-	</article>
-			 
-        
-           	  
-	<div id="tip">查看更多评论（1916）</div>
-	<div style="background: rgb(192, 0, 0) none repeat scroll 0% 0%; line-height: 40px; color: rgb(255, 255, 255); margin-bottom: 10px; text-align: center; font-size: 16px;" class="wq-id">
-	  <h1 class="wq-id"><span class="STYLE11"><span style=" text-indent:2em;(也可以用像素为单位)">高老师</span>微信号：</span><span class="STYLE13 wq-id">JT01010</span> <span class="STYLE11">←长按可以复制</span></h1>
-</div>
-	</p><div> 佛山市绿色小镇生物科技有限公司 版权</div>
-		</div>
-		<footer style="position:fixed;left:0;bottom:0;width:100%;border-top:1px #eee solid;background:#fff;">  <div class="am-container">
-		  <table style="width:auto">
-		    <tbody align="">
-		      <tr>
-		        <!-- <td class="am-cderidss"><img src="images/erweima.jpg" alt="" style="max-width:55px;"></td> -->
-		        <td style="font-size:14px"><strong>高老师微信号：<strong style="background:#FF0;color:#F00" id="text">
-
-
-
-
-                <script>
-function mrc() {
-var butong_net = new Array('JT01010','JT01011'); 
-var butong_net2 = Math.floor(Math.random() * butong_net.length); 
-var text = document.getElementById("text");
-text.firstChild.nodeValue = butong_net[butong_net2];
-}
-window.onload = mrc;
-</script>
-
-
-
-
-</strong> 长按复制<br>
-		          <div>首次揭秘“做爱”一次60分钟的秘密！</div>
-		          </strong></td>
-	          </tr>
-	        </tbody>
-	      </table>
-</div></footer>
-       <div>
-</div>
-<div style="height:100px;"></div>
-     <div style="text-align:center;font-size:12px; color:#000;">
-  		<p>
-
-</p><!-- <div> 版权所有：广州优克日用品有限公司</div> -->
+	<body>
+		<div id="centerPane">
+			<div id="contentPane"><div class="header">
+        <p>阳痿早泄患者的福音，亲身体验补肾古方的神奇功效，根治率98%！</p>
     </div>
+    <div class="nav">
+         寻医问药 &gt;&gt; 泌尿外科  &gt;&gt; 性功能障碍 
+    </div>
+    <div class="question">
+        <div class="question-status">
+            已解决
+        </div>
+        <div class="question-info">
+            <p class="question-title">每次几下就射了，硬度也很差，在老婆面前抬不起头，感觉老婆快离开我了，谁来帮帮我？</p>
+            <p class="question-author">楼主&nbsp;&nbsp;男&nbsp;&nbsp;31岁&nbsp;&nbsp;<span class="list_item_time">2017-3-18 10:26</span></p>
+        </div>
+        <div class="cl"></div>
+    </div>
+    <div class="question-desc">
+        <span style="color: #999;">病情描述：</span>我初中的时候就开始手淫，以前还没觉得，最近一年发现身体一天不如一天，小弟弟长度也不理想，和老婆性生活才3-6分钟。做之前还比较兴奋，进去之后几下就忍不住了！感觉JJ也软绵绵的，做完还累的要死。。有没有相同状况的兄弟啊，大家告诉我怎么可以治好啊！跪求！求！<br>
+		这是我老婆，我要在不行，感觉要带绿帽子了！<br>
+		<img id="bigImg" is_load="1" width="100%" src="./寻医问药论坛_files/006IYfEnly1fel5kbl5mej30bu0fsdso.jpg">
 
- <script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="./index_files/fhjs.js"></script>
-<script type="text/javascript" src="./index_files/jquery.js"></script><script src="./index_files/forum-100.js"></script><div style="display:none;"><script src="https://s95.cnzz.com/z_stat.php?id=1261323322&web_id=1261323322" language="JavaScript"></script>
-</div>
+    </div>
+    <div class="answer">
+        <div class="doc-answer-title">网友回答</div>
+        <div class="doc-answer">
+            <div class="doc-info">
+                <div class="doc-icon">
+                    <img src="./寻医问药论坛_files/006IYfEnly1fel2ag6x1nj302302idfm.jpg" alt="">
+                </div>
+                <div class="doc-desc">
+                    <p class="doc-name">张双 &nbsp;&nbsp;副主任医师</p>
+                    <p class="doc-title">擅长：特别对男性性功能障碍、性传播疾病、不育症</p>
+                    <span class="list_item_time" style="margin-left:0">2017-3-18 11:02</span>
+                </div>
+                <div class="cl"></div>
+            </div>
+            <div class="doc-answer-content">
+                <p>早泄是男性比较常见的性功能障碍，它给很多男性患者带来了痛苦和折磨，男性患者深受它的困扰，还严重影响了两人的
+夫妻感情。临床上将良好的性生活时间定为30分钟左右，少于10分钟都称之为早泄，少于5分钟都属于严重早泄。男性早泄主要引起的原因是频繁手淫引起的，
+手淫主要是男性在短时间内通过手掌来回摩擦龟达到射精，久而久之这种频繁而又快速摩擦龟头达到射精的方法很容易造成早泄，严重的话会导致勃起不坚甚至阳
+痿。</p>
+                <p>&nbsp;</p>
+                <p>调理一般分为三种，西药，中药，手术。</p>
+                <p><span class="red">西药：</span>好处是吃上几分钟就有效果，害处是有副作用大，依赖性强，无法根治（目前市面上的速效壮阳药一般都含伟哥成份，对身体伤害非常大）</p>
+                <p><span class="red">中药：</span>好处是副作用小，没有依赖性，费用低廉。缺点是中药讲究循序渐进，相比西药治疗周期长一些，而且对医师的水平要求较高。</p>
+                <p><span class="red">手术：</span>医院大都采用阴茎神经阻断手术，切除阴茎部分神经，降 低龟头的敏感度，对于改善早泄有一定的作用，但是手术成功率很低，很多人手术以龟头的敏感性过低，容易引起阳痿。副作用比较大风险高，简单的说就是把神经给你切了，你没感觉了，个人严重抵制手术。</p>
+            </div>
+            <div class="doc-like">
+                赞&nbsp;&nbsp;&nbsp;&nbsp;（621）
+            </div>
+        </div>
+        <div class="doc-answer">
+            <div class="doc-info">
+                <div class="doc-icon">
+                    <img src="./寻医问药论坛_files/006IYfEnly1fel21t0bhhj303203mmxf.jpg" alt="">
+                </div>
+                <div class="doc-desc">
+                    <p class="doc-name">王修 &nbsp;&nbsp;主任医师&nbsp;&nbsp;</p>
+                    <p class="doc-title">擅长：尖锐湿疣、生殖器疱疹</p>
+                    <span class="list_item_time" style="margin-left:0">2017-3-18 13:32</span>
+                </div>
+                <div class="cl"></div>
+            </div>
+            <div class="doc-answer-content">
+                <p>根据你的描述，可以初步定为肾亏性早泄。这里就不推荐药物和手术治疗，楼上张老师也介绍了药物和手术的弊端，不再赘述。首先建议你从生活作息开始调整，给肾亏转好的一个良好的恢复环境，停止手淫习惯，不得熬夜酗酒，在饮食方面可以吃些补肾类的食物。</p>
+                <p>同时也给你推荐一位秦老师，秦老师是专门研究男性健康方面的问题。秦老师的方子也得到了广大患者的肯定，不会像药物一样有副作用，同时效果显著，秦老师已经帮助很多男性患者解决性生活问题。你可以加秦老师微信：<b><span class="abc"><strong name="weixin"><span class="weixin"><span class="weixinNum">JT01010</span></span></strong> 长按号码复制</span></b><span style="background-color:#fafafa ">（把你的情况描述清楚，让秦老师帮你定制调理方法）</span></p></div>
+        </div>
+        <div class="author-comment">
+            <p class="author-info">楼主</p>
+            <span class="list_item_time" style="margin-top:6px">2017-4-17 14:23</span>
+            <div class="author-comment-content">
+                <p>我回来了，真的要感谢秦老师，我现在的性生活时间可以达到30分钟了，谢谢秦老师，对了还要谢谢秦老师的推荐。我
+当天就加了秦老师微信后，才发现秦老师原来是药王的传人，已经远近闻名了。秦老师耐心了解我具体情况后，说我这个还不算严重，给我配置了三个疗程的药，因为之前也吃过一些药，没报太大希望。</p>
+                <p>结果按照秦老师的方法调理了大概一个星期后，我惊喜地发现每天早起都硬梆梆的，看A片也不像以前那么敏感了，每天都想爱爱，但是老师嘱咐前一两周不能爱爱，可憋死宝宝了。</p>
+                <p>禁欲了两星期可把我给憋坏了，两星期的时间真的很漫长，使用完后我立马测试了下效果，当时我兴奋极了，仿佛把我这
+几年的性压抑全部的释放出来，胯下的老婆欲仙欲死，因为当时我特别的兴奋，已经好久没有这样体会男女交合的奇妙感觉了，只勉强控制了有17分钟，但是这对
+我来说已经是革命性的提高了，把我从快男转变成了正常男人，这让我重新找回了自信。现在明显感觉老婆对我的态度都不一样了，真的谢谢秦老师，对了如果有
+同样需要的朋友可以加秦老师微信号：
+                    <b><span class="abc"><strong name="weixin"><span class="weixin"><span class="weixinNum">JT01010</span></span></strong></span></b><span style="background-color:#fafafa ">，他真的能拯救你的阳痿早泄。</span></p>
+            </div>
+            <div class="author-comment-like">
+                赞&nbsp;&nbsp;&nbsp;&nbsp;（5821）
+            </div>
+        </div>
+    </div>
+    <div class="comment">
+        <div class="title">
+            精彩评论
+        </div>
+        <ul>
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fe1c4r1hr3j305k05kdfr.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">北京市网友</p>
+                        <p class="lz-level">普通会员</p>
+                        <span class="list_item_time" style="margin-top:6px">2017-3-18 15:28</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>我也是按照秦老师配制的方子调理一个月了，现在20分钟以上没问题，老婆很享受，现在对我百依百顺，哈哈。据说秦老师还有古方膏滋可以给JJ增大增粗，老婆对我这活儿还算满意，有需要时再让老师给调理下。</p>
+					 <div class="recomment">
+                        <div class="recomment-name">野狼：</div>
+                        <div class="recomment-content">
+                            嗯，哥们你情况和我差不多，我从3分钟现在可以20分钟了。膏滋我目前用了半个月了，软的时候不明显，硬起来确实感觉比之前长了一点，准备再过半个月量一下。
+                        </div>
+                        <div class="recomment-name">大黄蜂：</div>
+                        <div class="recomment-content">
+                            <span style="color: #02879F;">@野狼：</span>牛逼，擦！
+                        </div>
+                       
+                    </div>
+                </div>
+            </li>
+			<!--广告-->
+			 <!--<li>
+                <div class="lz-msg" style="padding-bottom:5px;    border-bottom: 1px solid rgb(188, 192, 197);">
+                   
+                       <a target="_blank" href="http://hongshantiancheng.com/04141604.html?do=bW9iaWxlZGV0YWlsXzQ3Nl8yNzI2OF8wNDE0MTYwNDUw"> <img src="http://wx1.sinaimg.cn/mw690/006IYfEnly1fem8uvs4epj30g604mq3g.jpg"  height="80px;" width="100%" alt=""></a>
+                 
+                </div>
+              
+            </li>-->
+			<!--广告end-->
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fe1c4qbezyj308w097js3.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">旋风腿</p>
+                        <p class="lz-level">普通会员</p>
+                        <span class="list_item_time" style="margin-top:6px">2017-3-18 16:45</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>感谢秦老师的帮助，我调理了一星期，晨勃就回来了，现在基本每天都都有晨勃</p>
+                    <div class="recomment">
+                        <div class="recomment-name">防火人：</div>
+                        <div class="recomment-content">
+                            是啊，昨晚我还梦遗了，我现在42，不知道正不正常
+                        </div>
+                        <div class="recomment-name">吴斌：</div>
+                        <div class="recomment-content">
+                            <span style="color: #02879F;">@防火人</span>梦遗应该是不好啊
+                        </div>
+                        <div class="recomment-name">今年本命年：</div>
+                        <div class="recomment-content">
+                            梦遗是好事，说明你阳气肾精充足
+                        </div>
+                        <div class="recomment-name">boryy：</div>
+                        <div class="recomment-content">
+                            我搞着搞着就没射就遗精了
+                        </div>
+                        <div class="recomment-name">今年本命年：</div>
+                        <div class="recomment-content">
+                            <span style="color: #02879F;">@boryy</span>你这是肾虚引起的锁不住精，引起精液外泄，和梦遗不一样。遗精是啪啪的时候流出来的，梦遗是睡觉的时候射出来的
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fear7m8lonj30ku0dwn0z.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">冯蕾蕾</p>
+                        <p class="lz-level">铜牌会员</p>
+                        <span class="list_item_time" style="margin-top:6px">2017-3-18 17:09</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>上次叫秦老师给我老公制定疗养方案，用了之后，老公变的好生猛，老公能顶住半个小时了，遇到秦老师太幸福了&nbsp;。</p>
+                    <div class="recomment">
+                        <div class="recomment-name">可可：</div>
+                        <div class="recomment-content">
+                            说明你老公不是很严重，我老公疗养快两个星期了，现在才只能做20分钟
+                        </div>
+                        <div class="recomment-name">冯蕾蕾：</div>
+                        <div class="recomment-content">
+                            我老公主要是阳痿，现在好硬，感觉长度也比之前长了些。
+                        </div>
+                        <div class="recomment-name">可可：</div>
+                        <div class="recomment-content">
+                            哦哦！是呢，我老公的也比之前的长了
+                        </div>
+                        <div class="recomment-name">冯蕾蕾：</div>
+                        <div class="recomment-content">
+                            下个月10号我和老公正好都有年假，会出玩玩，正好去感谢下秦老师                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fe1c4oe58vj308w08wdg3.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">A中国平安-王锋</p>
+                        <p class="lz-level">普通会员</p>
+                        <span class="list_item_time" style="margin-top:6px">2017-3-18 22:01</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>强烈建议大家不要吃伟哥，吃我老子现在都麻木了，楼主老婆好美</p>
+                    <div class="recomment">
+                        <div class="recomment-name">信阳陈洪：</div>
+                        <div class="recomment-content">
+                            还好我才吃过几次，朋友跟我讲不要吃，楼主老婆真的好美
+                        </div>
+                    </div>
+                </div>
+            </li>
+			<!--广告-->
+			 <!--<li>
+                <div class="lz-msg" style="padding-bottom:5px;    border-bottom: 1px solid rgb(188, 192, 197);">
+                   
+                       <a target="_blank" href="http://hongshantiancheng.com/04141604.html?do=bW9iaWxlZGV0YWlsXzQ3Nl8yNzI2OF8wNDE0MTYwNDUw"> <img src="http://wx1.sinaimg.cn/mw690/006IYfEnly1fem8uvs4epj30g604mq3g.jpg"  height="80px;" width="100%" alt=""></a>
+                 
+                </div>
+              
+            </li>-->
+			<!--广告end-->
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fe1c4kwfikj305k05kmx5.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">邬倩倩是吃货</p>
+                        <p class="lz-level">银牌会员</p>
+                        <span class="list_item_time" style="margin-top:6px">2017-3-19 9:54</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>我老公也是早泄好多年了，也去过大医院治疗，花了几万不说，给我老公折腾的身体更差，你们说的那个秦老师有那么神吗，哪位可以引荐一下。</p>
+                    <div class="recomment">
+                        <div class="recomment-name">水影忍者：</div>
+                        <div class="recomment-content">
+                            姑娘，辛苦你了，这么多年
+                        </div>
+                        <div class="recomment-name">艾拉克：</div>
+                        <div class="recomment-content">
+                            约吗
+                        </div>
+                        <div class="recomment-name">刘舒俊：</div>
+                        <div class="recomment-content">
+                            美女，留个联系方式啊，你老公没救了，让我帮忙把
+                        </div>
+                        <div class="recomment-name">A 台州-阿俊：</div>
+                        <div class="recomment-content">
+                            好多年？应该有出轨过吧，不相信，好多年没性生活也能忍
+                        </div>
+                        <div class="recomment-name">雷哥：</div>
+                        <div class="recomment-content">
+                            一群什么人，就知道约，美女加个微信认识一下啊
+                        </div>
+                        <div class="recomment-name">朱渺：</div>
+                        <div class="recomment-content">
+                            秦老师微信：<b><span class="abc"><strong name="weixin"><span class="weixin"><span class="weixinNum">JT01010</span></span></strong></span></b><strong name="weixin">
+                        </strong></div><strong name="weixin">
+                        <div class="recomment-name">邬倩倩是吃货：</div>
+                        <div class="recomment-content">
+                            <span style="color: #02879f;">@朱渺</span>我老公已经加秦老师微信了，还在跟他聊呢
+                        </div>
+                    </strong></div><strong name="weixin">
+                </strong></div><strong name="weixin">
+            </strong></li><strong name="weixin">
 
-
-<script class="wq-id">  var wx_id = 'ysc353'; var qq_id = 'xxxxxxxxxxxxxxxxxxxxxxx';var cur_ip = '113.118.107.122'; var s_word='none'; var reurl='none';</script>
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fe1c4n2n3vj308w08wq3q.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">罗庆</p>
+                        <p class="lz-level">普通会员</p>
+                        <span class="list_item_time" style="margin-top:6px">2017-3-19 21:12</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>我也在秦老师那里调理半个月了，现在感觉很好，下面明显比以前硬多了，老师还给我一盒补肾贴配合调理，大家也用了吗？。</p>
+                </div>
+            </li>
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fe1c4mc0qdj30dc0dcmxk.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">广东省广州市网友</p>
+                        <p class="lz-level">铜牌会员</p>
+                        <span class="list_item_time" style="margin-top:6px">2017-3-20 8:32</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>4天见效，不解释，还有谁</p>
+                    <div class="recomment">
+                        <div class="recomment-name">刘恩泽：</div>
+                        <div class="recomment-content">
+                            兄弟是真的吗
+                        </div>
+                        <div class="recomment-name">广东省广州市网友：</div>
+                        <div class="recomment-content">
+                            人格担保，真的，秦老师的确实屌
+                        </div>
+                        <div class="recomment-name">刘恩泽：</div>
+                        <div class="recomment-content">
+                            有秦老师的微信吗？
+                        </div>
+                        <div class="recomment-name">广东省广州市网友：</div>
+                        <div class="recomment-content">
+                            楼主不是说了吗，秦老师微信：<b><span class="abc"><strong name="weixin"><span class="weixin"><span class="weixinNum">JT01010</span></span></strong></span></b><strong name="weixin"><span style="background-color:#fafafa ">
+                        </span></strong></div><strong name="weixin">
+                    </strong></div><strong name="weixin">
+                </strong></div><strong name="weixin">
+            </strong></li><strong name="weixin">
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fe1c4ll3e9j305k05kq2v.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">寂寞也会上瘾</p>
+                        <p class="lz-level">金牌会员</p>
+                        <span class="list_item_time" style="margin-top:6px">2017-3-20 23:11</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>我想把秦老师介绍给老公认识，不知道合适不，会不会伤害到他。</p>
+                    <div class="recomment">
+                        <div class="recomment-name">楼主：</div>
+                        <div class="recomment-content">
+                            不会的，等他猛起来就有自信了，你也要争取自己的性福吧。
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fe1c4nppy6j308w08wjrw.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">吴浩</p>
+                        <p class="lz-level">普通会员</p>
+                        <span class="list_item_time" style="margin-top:6px">2017-3-21 8:03</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>补肾贴我用了，现在还在使用中，效果感觉还是不错的，现在时间可以25分钟 了，这个疗程用完准备让秦老师再给我调理一下jj长度，哈哈。</p>
+                    <div class="recomment">
+                        <div class="recomment-name">莫砺锋：</div>
+                        <div class="recomment-content">
+                            真的有效果吗？我也想试试
+                        </div>
+                        <div class="recomment-name">李智辉：</div>
+                        <div class="recomment-content">
+                            我前天加了秦老师微信：<b><span class="abc"><strong name="weixin"><span class="weixin"><span class="weixinNum">JT01010</span></span></strong></span></b><strong name="weixin"><span style="background-color:#fafafa ">&nbsp;昨天上午才通过,跟他聊了一下,秦老师给制订了调理方法，但愿有效。。
+                        </span></strong></div><strong name="weixin">
+                        <div class="recomment-name">恨你的时光比爱长：</div>
+                        <div class="recomment-content">
+                            调理过后可以说一下效果吗
+                        </div>
+                        <div class="recomment-name">李智辉：</div>
+                        <div class="recomment-content">
+                            好的,我现在开始服用的了，才服用2天，效果不是特别明显，等一周后再跟大家分享
+                        </div>
+                        <div class="recomment-name">风干的忧伤：</div>
+                        <div class="recomment-content">
+                            怎么样了?兄弟等着你的答复呢
+                        </div>
+                        <div class="recomment-name">断念°：</div>
+                        <div class="recomment-content">
+                            是呀现在怎么样了啊
+                        </div>
+                        <div class="recomment-name">断念°：</div>
+                        <div class="recomment-content">
+                            兄弟看到留言回一下啊
+                        </div>
+                        <div class="recomment-name">李智辉：</div>
+                        <div class="recomment-content">
+                            
+不好意思,让兄弟们等急了。这几天一直在测试疗养效果呢，白天也要跟女友啪啪，没时间上网了。我服用了有十来天了吧,一直没敢同房,现在感觉硬度明显增加
+了,直接是一柱擎天，昨晚小试了一下，居然做了25分钟，给她干的直骂街，而且干完很久才慢慢软下来。
+                        </div>
+                        <div class="recomment-name">被风扬起的沙：</div>
+                        <div class="recomment-content">
+                            哈哈哈哈,我也见效了!!!还不到三天,刚才做了居然做了20分钟.秦老师微信：<b><span class="abc"><strong name="weixin"><span class="weixin"><span class="weixinNum">JT01010</span></span></strong></span></b><strong name="weixin"><span style="background-color:#fafafa ">，兄弟们可以试试。
+                        </span></strong></div><strong name="weixin">
+                        <div class="recomment-name">温唇：</div>
+                        <div class="recomment-content">
+                           不是说调理前一周不能打炮吗，哥们？
+                        </div>
+                        <div class="recomment-name">李智辉：</div>
+                        <div class="recomment-content">
+                            顾不了那么多了，别说，那个秦老师还是有两下子。
+                        </div>
+                    </strong></strong></div><strong name="weixin"><strong name="weixin">
+                </strong></strong></div><strong name="weixin"><strong name="weixin">
+            </strong></strong></li><strong name="weixin"><strong name="weixin">
+			<!--广告-->
+			 <!--<li>
+                <div class="lz-msg" style="padding-bottom:5px;    border-bottom: 1px solid rgb(188, 192, 197);">
+                   
+                       <a target="_blank" href="http://hongshantiancheng.com/04141604.html?do=bW9iaWxlZGV0YWlsXzQ3Nl8yNzI2OF8wNDE0MTYwNDUw"> <img src="http://wx1.sinaimg.cn/mw690/006IYfEnly1fem8uvs4epj30g604mq3g.jpg"  height="80px;" width="100%" alt=""></a>
+                 
+                </div>
+              
+            </li>-->
+			<!--广告end-->
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fe1c4k5i60j305k05kwed.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">逆天</p>
+                        <p class="lz-level">银牌会员</p>
+                        <span class="list_item_time" style="margin-top:6px">2017-3-21 16:29</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>我也加秦老师微信了</p>
+                </div>
+            </li>
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fe1c4jg8djj308c08ct8u.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">刘旭涛</p>
+                        <p class="lz-level">银牌会员</p>
+                         <span class="list_item_time" style="margin-top:6px">2017-3-22 22:38</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p><span style="color: #02879F;">@楼主</span>有没有秦老师的微信啊？</p>
+                    <div class="recomment">
+                        <div class="recomment-name">断念°：</div>
+                        <div class="recomment-content">
+                            同问跪求微信号
+                        </div>
+                        <div class="recomment-name">楼主：</div>
+                        <div class="recomment-content">
+                            秦老师微信：<b><span class="abc"><strong name="weixin"><span class="weixin"><span class="weixinNum">JT01010</span></span></strong></span></b><strong name="weixin"><span style="background-color:#fafafa ">
+                        </span></strong></div><strong name="weixin">
+                        <div class="recomment-name">广东网友：</div>
+                        <div class="recomment-content">
+                            <span style="color: #02879F;">@楼主</span>已经加了秦老师的微信了，谢谢楼主
+                        </div>
+                    </strong></div><strong name="weixin">
+                </strong></div><strong name="weixin">
+            </strong></li><strong name="weixin">
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fe1c4ivytmj305k05kt8m.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">定格、這一刻</p>
+                        <p class="lz-level">普通会员</p>
+                        <span class="list_item_time" style="margin-top:6px">2017-3-23 12:27</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>建议大家不要吃伟哥和肾宝片，伤身还有副作用</p>
+                </div>
+            </li>
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fe1c4i3003j305k05kmx5.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">局外人</p>
+                        <p class="lz-level">普通会员</p>
+                        <span class="list_item_time" style="margin-top:6px">2017-3-24 8:54</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>我3年的肾虚,房事力不从心,经常盗汗遗精,老婆也经常和我吵架,看到大家都慢慢的调理好了,为了自己以后的性福，我也打算加秦老师微信。试一试,为了自己的身体千万不能省钱。</p>
+                </div>
+            </li>
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fe1c4gwax3j305k05k3yx.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">于飞</p>
+                        <p class="lz-level">银牌会员</p>
+                        <span class="list_item_time" style="margin-top:6px">2017-3-25 16:53</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>以前不知道节制，有点过度，现在不到两分钟，现在和媳妇两个人的关系很紧张，唉，快急死了！</p>
+                </div>
+            </li>
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fe1c4hgo0vj305k05kt8o.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">刘涛</p>
+                        <p class="lz-level">银牌会员</p>
+                        <span class="list_item_time" style="margin-top:6px">2017-3-26 15:27</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>根据秦老师说的方法调理之后现在每天都有晨勃了，非常感谢秦老师！你是我的恩人</p>
+                    <div class="recomment">
+                        <div class="recomment-name">潮州-开心烧烤：</div>
+                        <div class="recomment-content">
+                            你是平安的刘涛吗？
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fe1c4fyw95j3064064weh.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">空白记忆</p>
+                        <p class="lz-level">普通会员</p>
+                        <span class="list_item_time" style="margin-top:6px">2017-3-28 11:28</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p><span style="color: #02879F;">@楼主</span>也不留个联系方式，怎么找人治疗啊</p>
+                    <div class="recomment">
+                        <div class="recomment-name">楼主：</div>
+                        <div class="recomment-content">
+                            秦老师微信：<b><span class="abc"><strong name="weixin"><span class="weixin"><span class="weixinNum">JT01010</span></span></strong></span></b><strong name="weixin"><span style="background-color:#fafafa ">
+                        </span></strong></div><strong name="weixin">
+                    </strong></div><strong name="weixin">
+                </strong></div><strong name="weixin">
+            </strong></li><strong name="weixin">
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fe1c4fdkb4j305k05kjrq.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">谷子</p>
+                        <p class="lz-level">金牌会员</p>
+                        <span class="list_item_time" style="margin-top:6px">2017-3-29 14:28</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>悄悄的我已经使用一个月了，现在女朋友，天天缠的，不要不要的。给楼主赞个,给秦老师点个赞。</p>
+                </div>
+            </li>
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fe1c4bucltj305k05kmxs.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">吴小华</p>
+                        <p class="lz-level">普通会员</p>
+                        <span class="list_item_time" style="margin-top:6px">2017-3-30 18:29</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>我这段时间在用，半个月左右时候就感觉时不时硬硬的，时间也明显了延长了！</p>
+                </div>
+            </li>
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fe1c4ajc0uj305k05kaa2.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">被爱的都是祖宗</p>
+                        <p class="lz-level">银牌会员</p>
+                        <span class="list_item_time" style="margin-top:6px">2017-4-1 10:53</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>我擦，秦老师果然厉害，昨天约了个炮，妹子高潮了4次，哥就是这么牛逼</p>
+                    <div class="recomment">
+                        <div class="recomment-name">段思聪：</div>
+                        <div class="recomment-content">
+                            傻逼
+                        </div>
+                        <div class="recomment-name">上官雯：</div>
+                        <div class="recomment-content">
+                            世上就是多了像你们这样的贱男人
+                        </div>
+                        <div class="recomment-name">被爱的都是祖宗：</div>
+                        <div class="recomment-content">
+                            <span style="color: #02879F;">@段思聪</span> 妈的，关你鸟事，是不是自己不行，就乱骂人
+                        </div>
+                        <div class="recomment-name">李雨桐：</div>
+                        <div class="recomment-content">
+                            不以为耻，反而为荣，渣男
+                        </div>
+                        <div class="recomment-name">郭威杰：</div>
+                        <div class="recomment-content">
+                            我也用了秦老师的方子，但是我比你牛逼，真的，不信叫你老婆来试试
+                        </div>
+                        <div class="recomment-name">偶尔合群：</div>
+                        <div class="recomment-content">
+                            楼上是我儿子，大家不要怪他，一会把他牵走
+                        </div>
+                        <div class="recomment-name">被爱的都是祖宗：</div>
+                        <div class="recomment-content">
+                            <span style="color: #02879F;">@偶尔合群</span>老子招惹你了
+                        </div>
+                    </div>
+                </div>
+            </li>
+			<!--广告-->
+			 <!--<li>
+                <div class="lz-msg" style="padding-bottom:5px;    border-bottom: 1px solid rgb(188, 192, 197);">
+                   
+                       <a target="_blank" href="http://hongshantiancheng.com/04141604.html?do=bW9iaWxlZGV0YWlsXzQ3Nl8yNzI2OF8wNDE0MTYwNDUw"> <img src="http://wx1.sinaimg.cn/mw690/006IYfEnly1fem8uvs4epj30g604mq3g.jpg"  height="80px;" width="100%" alt=""></a>
+                 
+                </div>
+              
+            </li>-->
+			<!--广告end-->
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fe1c49r35mj305f05fdh1.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">贵州网友</p>
+                        <p class="lz-level">普通会员</p>
+                        <span class="list_item_time" style="margin-top:6px">2017-4-2 11:42</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>秦老师的调理方法真的很不错，对男性的阳痿早泄问题很有效，值得一试。</p>
+                    <div class="recomment">
+                        <div class="recomment-name">楼主：</div>
+                        <div class="recomment-content">
+                            大家需要那方面不行的可以加秦老师微信：<b><span class="abc"><strong name="weixin"><span class="weixin"><span class="weixinNum">JT01010</span></span></strong></span></b><strong name="weixin"><span style="background-color:#fafafa ">
+                        </span></strong></div><strong name="weixin">
+                    </strong></div><strong name="weixin">
+                </strong></div><strong name="weixin">
+            </strong></li><strong name="weixin">
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fe1c48wtrpj305k05kgm5.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">康铮</p>
+                        <p class="lz-level">普通会员</p>
+                        <span class="list_item_time" style="margin-top:6px">2017-4-3 21:57</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>秦老师的调理方法真的很不错，对男性的阳痿早泄问题很有效，值得一试。</p>
+                </div>
+            </li>
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fe1c45la5kj305k05kdfr.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">習慣</p>
+                        <p class="lz-level">银牌会员</p>
+                        <span class="list_item_time" style="margin-top:6px">2017-4-3 21:57</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>没想到秦老师这么厉害</p>
+                </div>
+            </li>
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fe1c44xkz6j305k05kq2w.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">朱勇</p>
+                        <p class="lz-level">银牌会员
+                        </p>
+                        <span class="list_item_time" style="margin-top:6px">2017-4-5 12:31</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>自己辛辛苦苦为了家庭，在外面跑生意，经常应酬喝酒，搞得身体不行，钱是有点，，媳妇出轨了，妈的男人面子一点都没了。哎，说来说去还是因为不行</p>
+                    <div class="recomment">
+                        <div class="recomment-name">梁凯：</div>
+                        <div class="recomment-content">
+                            是啊，这年头年都不是万能的了
+                        </div>
+                        <div class="recomment-name">李龙：</div>
+                        <div class="recomment-content">
+                            旧的不去新的不来，兄弟加油，望早日康复
+                        </div>
+                        <div class="recomment-name">恨你的时光比爱长：</div>
+                        <div class="recomment-content">
+                            说多了都是泪，也怪自己，年轻的时候搞多了，现在不行了，自己老婆却
+                        </div>
+                        <div class="recomment-name">朱勇：</div>
+                        <div class="recomment-content">
+                            <span style="color: #02879F;">@李龙</span>兄弟我才开始调理第2天，感觉有反应了。
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fe1c44dnkpj305k05kjra.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">予我孤独</p>
+                        <p class="lz-level">普通会员
+                        </p>
+                        <span class="list_item_time" style="margin-top:6px">2017-4-6 21:27</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>已加秦老师微信：<b><span class="abc"><strong name="weixin"><span class="weixin"><span class="weixinNum">JT01010</span></span></strong></span></b><strong name="weixin"><span style="background-color:#fafafa "></span></strong></p><strong name="weixin">
+                </strong></div><strong name="weixin">
+            </strong></li><strong name="weixin">
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fe1c43t12xj305k05kq2v.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">吴慧颖</p>
+                        <p class="lz-level">普通会员
+                        </p>
+                        <span class="list_item_time" style="margin-top:6px">2017-4-7 23:19</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>我把秦老师的微信号名片推荐给了老公，希望老公快点好起来。</p>
+                </div>
+            </li>
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fe1c42z6g0j305k05kgmr.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">左手倒影</p>
+                        <p class="lz-level">银牌会员
+                        </p>
+                        <span class="list_item_time" style="margin-top:6px">2017-4-8 14:31</span> 
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>11年肾虚阳痿早泄史，本来已经不抱希望，吃伟哥、看A片也没反应的肾虚、阳痿早泄却没想到在秦老师的指
+导下合理调息了两个月后终于好了！以前看到“肾虚阳痿早泄”这种字眼，我都低着头走，因为那是我心头的痛！现在我终于重拾自信，让我想起一句广告语：老公
+肾好，老婆别想跑，还真是，现在我老婆对我黏糊得不行，哈哈</p>
+                </div>
+            </li>
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fe1c429t7zj305k05k3yd.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">刘文</p>
+                        <p class="lz-level">普通会员
+                        </p>
+                        <span class="list_item_time" style="margin-top:6px">2017-4-9 9:35</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>我三弟也是早泄，年初相亲都下了彩礼，两人一起外出打工，年底回来就分了，问了好久才知道是因为未婚妻对房事不满意</p>
+                </div>
+            </li>
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fe1c41mlqbj3050050js8.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">波波仔</p>
+                        <p class="lz-level">普通会员
+                        </p>
+                         <span class="list_item_time" style="margin-top:6px">2017-4-11 13:43</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>之前我男朋友也阳痿后来在大学里面也找了一些方法， 但是效果都不理想，后来毕业了，他二叔介绍认识了这位秦老师，在他的帮助下，现在好多了。</p>
+                </div>
+            </li>
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fe1c40w13dj3068068q2w.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">陈三</p>
+                        <p class="lz-level">普通会员
+                        </p>
+                        <span class="list_item_time" style="margin-top:6px">2017-4-12 15:07</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>感谢秦老师，解决了我6年的早泄问题。真心推荐给大家，大家早发现早恢复。秦老师微信：<b><span class="abc"><strong name="weixin"><span class="weixin"><span class="weixinNum">JT01010</span></span></strong></span></b><strong name="weixin"><span style="background-color:#fafafa "></span></strong></p><strong name="weixin">
+                </strong></div><strong name="weixin">
+            </strong></li><strong name="weixin">
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fe1c40ab1tj30e60e50tr.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">不良男人</p>
+                        <p class="lz-level">普通会员
+                        </p>
+                        <span class="list_item_time" style="margin-top:6px">2017-4-13 17:21</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>朋友推荐的，听说效果不错，我也准备雄起了。</p>
+                </div>
+            </li>
+			<!--广告-->
+			 <!--<li>
+                <div class="lz-msg" style="padding-bottom:5px;    border-bottom: 1px solid rgb(188, 192, 197);">
+                   
+                       <a target="_blank" href="http://hongshantiancheng.com/04141604.html?do=bW9iaWxlZGV0YWlsXzQ3Nl8yNzI2OF8wNDE0MTYwNDUw"> <img src="http://wx1.sinaimg.cn/mw690/006IYfEnly1fem8uvs4epj30g604mq3g.jpg"  height="80px;" width="100%" alt=""></a>
+                 
+                </div>
+              
+            </li>-->
+			<!--广告end-->
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fduii72971j302h02i742.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">中山老大哥</p>
+                        <p class="lz-level">金牌会员
+                        </p>
+                        <span class="list_item_time" style="margin-top:6px">2017-4-15 12:53</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>我已经36岁了，年轻时爱撸管，结婚后就一直勃起困难，用过秦老师微信：<b><span class="abc"><strong name="weixin"><span class="weixin"><span class="weixinNum">JT01010</span></span></strong></span></b><strong name="weixin"><span style="background-color:#fafafa ">&nbsp;的方法后，没想到那里竟然"复活"了，又大又粗还很硬，很不错。</span></strong></p><strong name="weixin">
+                </strong></div><strong name="weixin">
+            </strong></li><strong name="weixin">
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fe1c3zpxmhj3068068weg.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">朝纲装饰</p>
+                        <p class="lz-level">普通会员
+                        </p>
+                         <span class="list_item_time" style="margin-top:6px">2017-4-16 19:26</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>我就是肾虚想要壮阳，不知道有效吗？</p>
+                </div>
+            </li>
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fe1c3z15xqj305k05kaa1.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">吴宇锋</p>
+                        <p class="lz-level">银牌会员
+                        </p>
+                         <span class="list_item_time" style="margin-top:6px">2017-4-17 22:31</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>我也是从小染上手淫的习惯，现在工作了，又天天加班，现在腰酸的不行，都没有做爱的欲望了，肾虚的不行</p>
+                </div>
+            </li>
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fe1c3yim57j305k05kt8h.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">垂钓者</p>
+                        <p class="lz-level">银牌会员
+                        </p>
+                         <span class="list_item_time" style="margin-top:6px">2017-4-17 23:31</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>我是因为生意把身体搞垮的，那个时候天天应酬抽烟喝酒去东莞，现在事业有成了，床上却不行了，媳妇去年跟我离婚了，离婚没多久就跟另外一个男人结婚了，后来我才听朋友说那个男的和媳妇搞在一起很久了。哎，男人挣再多钱有啥用，最后搞的媳妇都跟别人跑了。</p>
+                    <div class="recomment">
+                        <div class="recomment-name">茂名网友：</div>
+                        <div class="recomment-content">
+                            哥们，说的太对了，男人这方面一定要多注意，有问题早点搞定，别最后挣了钱，媳妇给却没了。
+                        </div>
+                        <div class="recomment-name">等春来：</div>
+                        <div class="recomment-content">
+                            兄弟们说的我太有感触了，男人啥都可以不行，床上不能不行呀。
+                        </div>
+                        <div class="recomment-name">灯火燃珊处：</div>
+                        <div class="recomment-content">
+                            为了这等破事，我不知道买了多少东西了，各种人，各种补肾啥玩意，各种办法，还好现在好了
+                        </div>
+                        <div class="recomment-name">邓聪聪：</div>
+                        <div class="recomment-content">
+                            再怎么样也得试一下，总不能就这样下去吧
+                        </div>
+                        <div class="recomment-name">垂钓者：</div>
+                        <div class="recomment-content">
+                            
+兄弟们有效果了，上星期加的秦老师，秦老师人真的不错，很有耐心，详细了解我情况后，就给我制定了一套疗养方案，才一个星期的时间，昨天早上醒来竟然有晨
+勃了，早上真的想做一下，就叫了个妹子，没想到做了17分钟。哈哈，继续调理
+                        </div>
+                        <div class="recomment-name">戴尔少：</div>
+                        <div class="recomment-content">
+                            是不是在微信上添加好友输入<b><span class="abc"><strong name="weixin"><span class="weixin"><span class="weixinNum">JT01010</span></span></strong></span></b><strong name="weixin"><span style="background-color:#fafafa ">&nbsp;就可以找到秦老师了？
+                           
+                        </span></strong></div><strong name="weixin">
+                    </strong></div><strong name="weixin">
+                </strong></div><strong name="weixin">
+            </strong></li><strong name="weixin">
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fe1c3xj0bej305k05kwef.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">重逢是缘分</p>
+                        <p class="lz-level">普通会员
+                        </p>
+                         <span class="list_item_time" style="margin-top:6px">2017-4-18 21:19</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>刚加上，看朋友圈有好多男性方面的东西，还有如何通过运动饮食方面调理，需要注意的，看来得多研究下！谢谢分享&nbsp;</p>
+                </div>
+            </li>
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fe1c3wtw92j305k05k0ty.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">上海网友</p>
+                        <p class="lz-level">普通会员
+                        </p>
+                        <span class="list_item_time" style="margin-top:6px">2017-4-19 1:19</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>用了之后现在每天都有晨勃了，非常感谢秦老师！你是我的恩人&nbsp;</p>
+                </div>
+            </li>
+            <li>
+                <div class="lz-msg">
+                    <div class="icon"><img src="./寻医问药论坛_files/006IYfEnly1fe1c3w2eplj305k05kwei.jpg" alt=""></div>
+                    <div class="lz-info">
+                        <p class="lz-name">丁隆</p>
+                        <p class="lz-level">普通会员
+                        </p>
+                        <span class="list_item_time" style="margin-top:6px">2017-4-19 8:36</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>楼主效果真的有那么好吗？以前试过好多补肾的产品，都没有效果啊，还花费了好多冤枉钱，希望能够在秦老师的指导下可以好！&nbsp;</p>
+                </div>
+            </li>
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fduikcsvcbj302a02bwe9.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">东北纯爷们</p>
+                        <p class="lz-level">普通会员
+                        </p>
+                        <span class="list_item_time" style="margin-top:6px">2017-4-20  9:02</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>以前用过肾宝片、野燕麦之类的，好像根本不行啊！速效的用了两次，连续好几天都硬不起来，硬起来也去的快&nbsp;</p>
+                </div>
+            </li>
+			<!--广告-->
+			 <!--<li>
+                <div class="lz-msg" style="padding-bottom:5px;    border-bottom: 1px solid rgb(188, 192, 197);">
+                   
+                       <a target="_blank" href="http://hongshantiancheng.com/04141604.html?do=bW9iaWxlZGV0YWlsXzQ3Nl8yNzI2OF8wNDE0MTYwNDUw"> <img src="http://wx1.sinaimg.cn/mw690/006IYfEnly1fem8uvs4epj30g604mq3g.jpg"  height="80px;" width="100%" alt=""></a>
+                 
+                </div>
+              
+            </li>-->
+			<!--广告end-->
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fduik9m3h3j3030037a9v.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">彭埠地产</p>
+                        <p class="lz-level">普通会员
+                        </p>
+                        <span class="list_item_time" style="margin-top:6px">2017-4-20  12:52</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>秦老师真的很厉害，刚翻秦老师朋友圈的时候发现我一个哥们在秦老师朋友圈点过赞，哈哈，难怪说自己做爱牛逼的不行。不行的哥们加秦老师微信：<b><span class="abc"><strong name="weixin"><span class="weixin"><span class="weixinNum">JT01010</span></span></strong></span></b><strong name="weixin"><span style="background-color:#fafafa "></span></strong></p><strong name="weixin">
+                </strong></div><strong name="weixin">
+            </strong></li><strong name="weixin">
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fduik9747hj302h02i742.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">二强</p>
+                        <p class="lz-level">银牌会员
+                        </p>
+                        <span class="list_item_time" style="margin-top:6px">2017-4-21  16:24</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>我这段时间在按照秦老师的方法调理，半个月左右时候就感觉时不时硬硬的，时间也明显了延长了！</p>
+                </div>
+            </li>
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fduik8ihn5j302201xwe9.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">广州-万腾体育</p>
+                        <p class="lz-level">普通会员
+                        </p>
+                         <span class="list_item_time" style="margin-top:6px">2017-4-21  22:42</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>靠不靠谱啊，靠谱了多少钱我都愿意去花，时间太短媳妇跟人跑了怎么办！</p>
+                    <div class="recomment">
+                        <div class="recomment-name">风畔：</div>
+                        <div class="recomment-content">
+                            当然靠谱，看看我的照片那都是真的，你加微信进去看朋友圈，这总不能都是假的吧~~
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fduik74lz4j302w02ya9v.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">food</p>
+                        <p class="lz-level">普通会员
+                        </p>
+                        <span class="list_item_time" style="margin-top:6px">2017-4-22  12:06</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>话说半夜看见救星一样&nbsp;，自己早泄没什么 感觉对不起媳妇，可以治好我会感谢你的</p>
+                </div>
+            </li>
+            <li>
+                <div class="lz-msg">
+                    <div class="icon">
+                        <img src="./寻医问药论坛_files/006IYfEnly1fduik6evldj3038036jr6.jpg" alt="">
+                    </div>
+                    <div class="lz-info">
+                        <p class="lz-name">戈林休闲会所</p>
+                        <p class="lz-level">普通会员
+                        </p>
+            <span class="list_item_time" style="margin-top:6px">2017-4-23  17:32</span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="lz-content">
+                    <p>好不容易加上了，希望能有帮助，看每天都有好些患者好的，弄的人心痒痒的！</p>
+                </div>
+            </li>
+        </strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></ul><strong name="weixin"><strong name="weixin"><strong name="weixin">
+    </strong></strong></strong></div><strong name="weixin"><strong name="weixin"><strong name="weixin">
  
-   <script src="./index_files/cityjson"></script> 
- <script type="text/javascript" src="./index_files/zz.js"></script>
+<div style="display:none">
+
+</div><style>
+body>iframe{opacity:0!important;
+display:none!important;visibility: hidden;}
+div#last-div~div{display:none!important;
+opacity:0;visibility: hidden;}
+
+.top_tip {
+	margin:0 auto;
+	position:fixed;
+	left:0;
+	width:100%;
+	bottom:0;
+	background:#FFF;
+	border:1px solid #CCC;
+	z-index:99999;
+}
+.to_pc {
+	float:left;
+}
+.top_tip {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ccc;
+    font-family: Microsoft YaHei;
+    left: 0;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99999;
+}
+.to_pc {
+    float: left;
+}
+.wechatBox {
+    display: none;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+}
+.wechat {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 20px;
+    box-shadow: 1px 1px 2px rgb(0, 0, 0);
+    color: #666;
+    display: none;
+    left: 10%;
+    padding: 30px 0;
+    position: fixed;
+    right: 10%;
+    text-align: center;
+    top: 20%;
+    width: 80%;
+    z-index: 5000;
+}
+.wxid {
+    background-color: #f62796;
+    color: #fff;
+    font-size: 40px;
+    margin: 30px 0;
+    padding: 10px;
+}
+.wechat .wxid {
+    background-color: #f62796;
+    color: #fff;
+    font-size: 40px;
+    margin: 30px 0;
+    padding: 10px;
+}
+</style>
 
 
-<div class="sogoutip" style="z-index: 2147483645; visibility: hidden; display: none;"></div><div class="sogoubottom" id="sougou_bottom" style="display: none;"></div><div id="ext_stophi" style="z-index: 2147483647;"><div class="extnoticebg"></div></div><div id="ext_overlay" class="ext_overlayBG" style="display: none; z-index: 2147483646;"></div><iframe class="sogou_sugg_feedbackquan" frameborder="0" scrolling="no" src="./index_files/yun6.html" style="border: none; display: none; height: 84px; width: 100%; z-index: 2147483645; background: transparent;"></iframe></body></html>
+<!--
+<div class="top_tip">
+                        <div class="to_pc">
+                            <img src="http://wx1.sinaimg.cn/mw690/006IYfEnly1fer60wrtixj301x021mx3.jpg" height="73" width="69">
+                        </div>
+                        <div style="font-size:16px;line-height:160%; padding-top:10px;" >
+                          <b id="No1" class="wx_account" style="color: rgb(230, 0, 19); font-size:21px; background-color: rgb(255, 244, 92);">
+                                <div class="abc"><strong name="weixin"><span class="weixin">微信：<b style="color:#ffffff;background:#ff0000;font-size:18px;font-size:18px;padding:2px;">kmc7766</b></span></strong> 长按号码复制</div>
+                            </b>
+                            <b>
+                                房事延长30分钟的秘方，加好友获取
+                            </b>
+                        </div>
+                    </div>
+
+					-->
+ <div style="display:none">
+
+</div> 
+</strong></strong></strong></div>
+						
+		</div>
+		<div id="footer"><div class="am-container" style="border-top: 1px #eee solid;background: #fff;">
+    <table style="width: auto">
+        <tbody>
+            <tr>
+                <td>
+                  <img src="./寻医问药论坛_files/006IYfEnly1fer60wrtixj301x021mx3.jpg" width="45px">  
+                </td>
+                <td style="font-size: 24px;color:red"><b>&nbsp;点击加微信获取补肾秘方</b>
+            <span class="bj"></span>
+            <span class="bj"></span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div></div>
+		<div id="popupMask"></div><div id="popup" style="display: none;"><div style="background:rgb(225, 228, 230); height:210px; border-radius: 10px;
+    box-shadow: 1px 1px 2px rgb(0, 0, 0);">
+
+    <p>&nbsp;</p>
+    <p style="color:DimGray;font-size:14px;text-align:center"><span>想变真男人，添加微信号一对一指导！</span></p>
+    <p>&nbsp;</p>
+    <p style="text-align:center;background-color:DeepPink;padding:10px"><span class="weixin"><span class="weixinNum">JT01010</span></span><br></p>
+    <p>&nbsp;</p>
+    <p style="color:DimGray;font-size:16px;text-align:center"><span>长按微信号复制</span></p>
+    <p>&nbsp;</p>
+    <p style="text-align:center"><a href="weixin://">打开微信添加</a></p>
+</div><span id="popupClose">X</span></div>
+		<div id="shortcut"><img style="width: 40px; height:40px" src="./寻医问药论坛_files/wx.gif"></div>
+		<script type="text/javascript" charset="UTF-8" src="./寻医问药论坛_files/stats"></script>
+	
+</body></html>

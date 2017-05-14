@@ -1,0 +1,459 @@
+(function(){
+	
+	var ProductManager = Class.create({
+		initialize: function(){			
+		},
+	
+		order: function(product, completeHandler){
+			product.productId = this.getPid();
+			product.channel = this.getCid();
+			new Ajax.Request('order', {
+				onComplete: completeHandler,
+				postBody: Object.toJSON(product),
+				method: 'POST',
+				asynchronous: true,
+				evalJS: false
+			});
+		},
+		
+		product: function(completeHandler){
+			new Ajax.Request('product?id='+this.getPid(), {				
+				postBody: null,
+				method: 'POST',
+				asynchronous: true,
+				evalJS: false,
+				onComplete: function(xhr){
+					if(xhr.status!=200){
+						alert('产品信息加载失败，请刷新页面');
+						console.log('load product error : '+xhr.responseText);
+						return;
+					}
+					//console.log('load product success : '+xhr.responseText);
+					var product = xhr.responseText.evalJSON();
+					completeHandler(product);
+				}
+			});
+		},
+		
+		getCid: function(){
+			return this.getParam('cid');
+		},
+		
+		getPid: function(){
+			var pid = this.getParam('pid');
+			if(pid) return pid;
+			var url = window.location.toString();
+			var i = url.lastIndexOf('/p');
+			url = url.substring(i+2);
+			i = url.indexOf('?');
+			if(i<0) i = url.indexOf('.');
+			if(i<0) return url;
+			return url.substring(0, i);
+		},
+		
+		getParam: function(name){
+			if($(name)) {
+				var v = $(name).getValue();
+				if(v) return v;
+			}
+			var url = window.location.toString();
+			var i = url.indexOf('?');
+			if(i<0) return null;
+			url = url.substring(i+1);
+			i = url.indexOf(name+'=');
+			if(i<0) return null;
+			url = url.substring(i+name.length()+1);
+			i = url.indexOf('&');
+			if(i<0) return url;
+			return url.substring(0, i);
+		},
+	});
+	
+	var Header = Class.create({
+		initialize: function(product){
+			document.title = product.name;
+			//$$('title')[0].update(product.name);
+			if(product.page.header){
+				$(document.head).insert({bottom: product.page.header});
+			}			
+		}
+	});
+	
+	var ContentPane = Class.create({
+		initialize: function(product){
+			$('contentPane').update('');
+			var content = product.page.content;
+			
+			if(content.startsWith('[')){
+				content = content.evalJSON();
+				for(var i=0; i<content.length; i++){
+					var item = content[i];
+					var child = null;
+					if(Object.isString(item)){
+						if(item.startsWith('http')) child = this.createImg({src: item});
+						else if(item.startsWith('<')) child = this.createHtml({html: item});
+						else child = this.createTxt({txt: item});
+					}
+					else if(item.type=='img') child = this.createImg(item);
+					else if(item.type=='txt') child = this.createTxt(item);
+					else if(item.type=='html') child = this.createHtml(item);
+					
+					if(child!=null){
+						if(item.className) child.writeAttribute('class', item.className);
+						if(item.style) child.writeAttribute('style', item.style);
+						$('contentPane').insert({ bottom: child });
+					}
+					else{
+						console.log('unknow item type : '+Object.toJSON(item));
+					}
+				}
+			}else{
+				$('contentPane').update(content);
+			}
+		},
+		
+		createHtml: function(item){
+			var element = new Element('div');
+			element.update(item.value||item.html||item.txt);
+			return element;
+		},
+		
+		createImg: function(item){
+			var img = new Element('img');
+			img.writeAttribute('src', item.src);
+			return img;
+		},
+		
+		createTxt: function(item){
+			var p = new Element('p');
+			if(item.txt) p.update(item.txt);
+			return p;
+		}
+	});
+	
+	var OrderPane = Class.create({
+		initialize: function(product){
+			var form = $('orderForm');
+			if(!form) return;
+			if(!product.page.order){
+				form.remove();
+				return;
+			}
+			form.show();	
+			var btn = $('submitButton');
+			if(btn) btn.observe('click', this.submit.bind(this));
+			//console.log('channel='+this.getChannel());
+			//console.log('productId='+this.getProductId());
+		},
+		
+		submit: function(){
+			var name = $('nameInput').getValue();
+			var tel = $('telInput').getValue();
+			var addr = $('addrInput').getValue();
+			var remark = $('remarkInput')?$('remarkInput').getValue():null;
+			
+			if(!this.nameValid(name)) return;
+			if(!this.telValid(tel)) return;
+			if(!this.addrValid(addr)) return;
+		      
+			getProductManager().order({
+				receiver: name,
+				tel: tel,
+				addr: addr,
+				remark: remark
+			}, this.completeHandler.bind(this));
+		},
+		
+		nameValid: function(name){
+			if (!name) {
+				this.alert('请输入收货人姓名！');
+	            return false;
+	        }
+	        if (!name.trim().match(/^[\u4e00-\u9fa5]{2,6}\s*$/)) {
+	        	this.alert('输入的收货人姓名不合法！');
+	            return false;
+	        }
+	        return true;
+		},
+		
+		telValid: function(tel){
+			if (!tel) {
+	        	this.alert('请输入手机号码！');
+	            return false;
+	        }
+	        if (!tel.match(/^0*(13|15|18)\d{9}$/)) {
+	        	this.alert('输入的手机号码不合法！');
+	            return false;
+	        }
+	        return true;
+		},
+		
+		addrValid: function(addr){
+			if (!addr) {
+	            alert('请输入详细地址！');
+	            return false;
+	        }
+	        if (addr.length > 50) {
+	            alert('输入的详细地址长度过长！');
+	            return false;
+	        }
+	        return true;
+		},
+
+		completeHandler: function(xhr){
+			if(xhr.status==200&&xhr.responseText=='ok'){
+				window.location = 'success.html';
+			}else{
+				this.alert('提交失败，请稍后重试');// : \n'+xhr.responseText);
+			}
+		},
+		
+		alert: function(msg){
+			window.alert(msg);
+		}
+	});
+	
+	var Footer = Class.create({
+		initialize: function(product){			
+			this.pane = $('footer');
+			if(!this.pane) return;
+			
+			var config = product.page.footer;
+			if(!config){
+				this.pane.remove();
+				return;
+			}
+			this.pane.show();
+			this.pane.observe('click', this.click.bind(this));
+			$(document).observe('hand:bottom', this.bottom.bind(this));
+			
+			if(config.startsWith('{')){
+				config = config.evalJSON();
+				this.initBg(config);
+				this.initIcon(config);
+				this.initText(config);		
+				if(config.style) this.pane.setStyle(config.style);				
+			}else{
+				this.pane.update(config);
+			}
+		},
+		
+		initBg: function(config){
+			if(!config.bg) return;
+			var img = new Element('img');
+			img.writeAttribute('src', config.bg);
+			img.addClassName('bg');
+			this.pane.insert({ bottom: img });
+		},
+		
+		initIcon: function(config){
+			if(!config.icon) return;
+			var img = new Element('img');
+			img.writeAttribute('src', config.icon);
+			img.addClassName('icon');
+			this.pane.insert({ bottom: img });
+		},
+		
+		initText: function(config){
+			if(!config.text) return;
+			var div = new Element('div');
+			div.addClassName('text');
+			div.update(config.text);
+			if(!config.icon) div.setStyle({'left':'16px'});
+			this.pane.insert({ bottom: div });
+		},
+		
+		click: function(config){
+			//alert('Go !!');
+			//document.body.scrollTop = document.body.scrollHeight;
+			//window.location.hash = 'orderNotice';
+			if($('popup')){
+				document.fire('hand:popup');
+			}else{
+				document.fire('hand:bottom');
+			}
+		},
+		
+		bottom: function(){
+			var anchor = this.getAnchor();
+			if(anchor) anchor.scrollTo();
+		},
+		
+		getAnchor: function(){
+			var orderForm = $('orderForm');
+			if(orderForm&&orderForm.visible()) return orderForm;
+			var children = $('contentPane').childElements();
+			return children[children.length-1];
+		}
+	});
+	
+	var Popup = Class.create({
+		initialize: function(product){
+			this.pane = $('popup');
+			if(!this.pane) return;
+
+			var config = product.page.popup;
+			if(!config){
+				return this.pane.remove();
+			}
+			this.createMask();
+			if(config.startsWith('{')){
+				config = config.evalJSON();
+				this.pane.update(config.text);
+				if(config.style) this.pane.setStyle(config.style);				
+			}else{
+				this.pane.update(config);
+			}
+			this.createCloseBtn();
+			$(document).observe('hand:popup', this.show.bind(this));			
+		},
+		
+		createMask: function(){
+			this.mask = new Element('div')
+				.writeAttribute('id', 'popupMask')
+				.observe('click', this.hide.bind(this));
+			this.pane.insert({before: this.mask});
+		},
+		
+		createCloseBtn: function(){
+			var btn = new Element('span')
+				.writeAttribute('id', 'popupClose')
+				.update('X')
+				.observe('click', this.hide.bind(this));
+			this.pane.insert({bottom: btn});
+		},
+		
+		show: function(){
+			var style = {
+				left: ($(document.body).getWidth()-this.pane.getWidth())/2+'px',
+				top: ($(document.body).getHeight()-this.pane.getHeight())/2+'px'
+			};
+			this.pane.setStyle(style);
+			this.pane.show();
+			this.mask.show();
+		},
+		
+		hide: function(){
+			this.pane.hide();
+			this.mask.hide();
+		}
+	});
+	
+	var Shortcut = Class.create({
+		initialize: function(product){
+			this.pane = $('shortcut');
+			if(!this.pane) return;			
+			
+			var config = product.page.shortcut;
+			if(!config) return this.pane.remove();
+			this.pane.show();
+			
+			if(config.startsWith('{')){
+				config = config.evalJSON();
+				this.pane.update(config.text);
+				if(config.style) this.pane.setStyle(config.style);				
+			}else{
+				this.pane.update(config);
+			}
+			this.pane.observe('click', this.click.bind(this, config));
+		},
+		
+		click: function(config){
+			if(config.click=='popup'||$('popup')){
+				document.fire('hand:popup');
+			}else{
+				document.fire('hand:bottom');
+			}
+		}
+	});
+	
+	var WeixinHandler = Class.create({
+		initialize: function(product){
+			var config = product.page.weixin;
+			if(!config) return;
+			config = config.evalJSON();
+			$$('.weixin').each(function(element){
+				element.update(config.text);				
+			});			
+			var nums = config.nums.split(',');
+			var i = new Date().getTime()%nums.length;
+			var num = nums[i];
+			$$('.weixinNum').each(function(element){
+				element.update(num);
+			});
+			this.initCopy(num);
+		},
+	
+		initCopy: function(num){
+			try{
+				var clipboard = new Clipboard('.weixin', {
+				    text: function(trigger) {
+				    	//alert('copy '+num);
+				        return num;
+				    }
+				});
+				clipboard.on('success', function(e) {		
+					alert('微信号复制成功 ：'+num);
+					console.log('copy weixin : '+e.text);
+				});
+//				clipboard.on('error', function(e) {
+//				    console.error('Action:', e.action);
+//				    console.error('Trigger:', e.trigger);
+//				});
+			}
+			catch(e){
+				console.error('init copy error', e);
+			}
+		}
+	});
+	
+	var Analyzer = Class.create({
+		initialize: function(product){			
+			if(!product.analyze) return;
+			var items = product.analyze.split(',');
+			for(var i=0; i<items.length; i++){
+				this.create(items[i]);
+			}
+		},
+	
+		create: function(src){
+//			var script = document.createElement("script");
+//			script.type = "text/javascript";
+//			script.charset="UTF-8";
+//			script.src = product.analyzeScript;
+//			document.body.appendChild(script);
+			var script = new Element("script");
+			script.writeAttribute('type', 'text/javascript');
+			script.writeAttribute('charset', 'UTF-8');
+			script.writeAttribute('src', src);
+			$(document.body).insert({ bottom: script });
+		}
+	});
+	
+	var getProductManager = function(){
+		var manager = new ProductManager();
+		return function(){ return manager};
+	}();
+	
+	function init(product){
+		try{
+			new Header(product);
+			new ContentPane(product);
+			new OrderPane(product);
+			new Footer(product);
+			new Popup(product);
+			new Shortcut(product);
+			new WeixinHandler(product);
+			new Analyzer(product);
+		}
+		catch (e) {
+			console.error('init error', e);
+		}
+	}
+	
+	document.observe("dom:loaded", function(){
+		getProductManager().product(function(product){			
+			init(product);
+		});
+	});
+})();
